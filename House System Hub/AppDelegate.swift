@@ -8,19 +8,21 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 import GoogleSignIn
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
 
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+        
         return true
     }
 
@@ -45,29 +47,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-      // ...
-      if let error = error {
-        print(error.localizedDescription)
-        return
-      }
 
-      guard let authentication = user.authentication else { return }
-      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                        accessToken: authentication.accessToken)
-        Auth.auth().signIn(with: credential) { (res, err) in
-            if err != nil {
-                print((err?.localizedDescription)!)
-                return
+        
+          if let error = error {
+            print(error.localizedDescription)
+            return
+          }
+
+          guard let authentication = user.authentication else { return }
+          let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                            accessToken: authentication.accessToken)
+            Auth.auth().signIn(with: credential) { (res, err) in
+                if err != nil {
+                    print((err?.localizedDescription)!)
+                    return
+                }
+                
+                //self.userData.loggedIn = true
+                print("User = \(res?.user.email ?? "none found")")
+                print("GUSER \(GIDSignIn.sharedInstance()?.currentUser.profile.givenName)")
+                print("FB USER \(Auth.auth().currentUser?.displayName)")
+                //print("Logged In AD? \(self.userData.loggedIn)")
             }
-            
-            print("User = \(res?.user.email ?? "none found")")
-        }
     }
-
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
-
 }
 

@@ -9,13 +9,47 @@
 import SwiftUI
 
 struct ArchiveView: View {
+    
+    @ObservedObject var obsReports = ReportLookup()
+    @State var isPresented = false
+    @State private var searchTerm: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                SearchBar(text: $searchTerm)
+                List {
+                    ForEach (obsReports.reports.filter {
+                        self.searchTerm.isEmpty ? true : $0.reportType.localizedCaseInsensitiveContains(self.searchTerm)
+                    }) { report in
+                        ReportRow(report: report)
+                    }
+                }
+            }
+        }.navigationViewStyle(StackNavigationViewStyle())
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+        }
     }
 }
 
 struct ArchiveView_Previews: PreviewProvider {
     static var previews: some View {
         ArchiveView()
+    }
+}
+
+struct ReportRow: View {
+    let report: Report
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text(report.reportType).font(.headline)
+                Text(" (\(report.mentorGroup))").font(.subheadline)
+                Spacer()
+            }
+            Text("Submitted by \(report.mentorName) on \(report.date)")
+        }
     }
 }

@@ -8,36 +8,34 @@
 
 import SwiftUI
 import GoogleSignIn
+import Firebase
 
 struct ContentView: View {
+    
+    @EnvironmentObject var session: SessionStore
+    
+    func getUser() {
+        session.listen()
+    }
+    
     var body: some View {
-        
-        VStack {
-            Text("Welcome to the House System Hub").font(.headline)
-            Text("Please sign in with your Google Account to get started.").font(.subheadline).padding()
-            google().frame(width: 200, height: 50, alignment: .center)
-        }
-        
+        Group {
+            if (session.session != nil) {
+//                Text("Hello user!")
+//                Button("Logout") {
+//                    self.session.signOut()
+//                }
+                MainView()
+            } else {
+              SignInView()
+            }
+        }.onAppear(perform: getUser)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct google: UIViewRepresentable {
-    
-    func makeUIView(context: UIViewRepresentableContext<google>) -> GIDSignInButton {
-        let button = GIDSignInButton()
-        button.colorScheme = .dark
-        button.style = .wide
-        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
-        return button
-    }
-    
-    func updateUIView(_ uiView: GIDSignInButton, context: UIViewRepresentableContext<google>) {
-        //
+            .environmentObject(SessionStore())
     }
 }

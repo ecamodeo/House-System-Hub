@@ -8,19 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		167EECA1FFD3E466A8F8FC63 /* Pods_House_System_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C790396F40753B2C4028FB /* Pods_House_System_Hub.framework */; };
+		D593758623CCF1F7003F4030 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D593758523CCF1F7003F4030 /* Authentication.swift */; };
+		D593758823CCF667003F4030 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D593758723CCF667003F4030 /* SignInView.swift */; };
+		D593758A23CE5216003F4030 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D593758923CE5216003F4030 /* MainView.swift */; };
+		D593758C23CE54E4003F4030 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D593758B23CE54E4003F4030 /* ReportView.swift */; };
+		D593758E23CF9F14003F4030 /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D593758D23CF9F14003F4030 /* ArchiveView.swift */; };
 		D5B01ADC23A96DE300CF0916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B01ADB23A96DE300CF0916 /* AppDelegate.swift */; };
 		D5B01ADE23A96DE300CF0916 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B01ADD23A96DE300CF0916 /* SceneDelegate.swift */; };
 		D5B01AE023A96DE300CF0916 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B01ADF23A96DE300CF0916 /* ContentView.swift */; };
 		D5B01AE223A96DE800CF0916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B01AE123A96DE800CF0916 /* Assets.xcassets */; };
 		D5B01AE523A96DE800CF0916 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5B01AE423A96DE800CF0916 /* Preview Assets.xcassets */; };
 		D5B01AE823A96DE800CF0916 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B01AE623A96DE800CF0916 /* LaunchScreen.storyboard */; };
-		D5B01AF023A9711400CF0916 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5B01AEF23A9711400CF0916 /* GoogleService-Info.plist */; };
+		D5B1BB5F23DB5B25006858BA /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1BB5E23DB5B24006858BA /* Database.swift */; };
+		D5B1BB6123DB80C7006858BA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1BB6023DB80C7006858BA /* SearchBar.swift */; };
+		D5C141D223AA9AA900E6DCFD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C141D123AA9AA900E6DCFD /* Models.swift */; };
+		D5C141D823ABE1D000E6DCFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5C141D723ABE1D000E6DCFD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		71F4F776877B28622E6B0F5C /* Pods-House System Hub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-House System Hub.release.xcconfig"; path = "Target Support Files/Pods-House System Hub/Pods-House System Hub.release.xcconfig"; sourceTree = "<group>"; };
 		813AAE1131FD197FBECA8E6E /* Pods-House System Hub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-House System Hub.debug.xcconfig"; path = "Target Support Files/Pods-House System Hub/Pods-House System Hub.debug.xcconfig"; sourceTree = "<group>"; };
 		93C790396F40753B2C4028FB /* Pods_House_System_Hub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_House_System_Hub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D593758523CCF1F7003F4030 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		D593758723CCF667003F4030 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		D593758923CE5216003F4030 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D593758B23CE54E4003F4030 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		D593758D23CF9F14003F4030 /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		D5B01AD823A96DE300CF0916 /* House System Hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "House System Hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B01ADB23A96DE300CF0916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B01ADD23A96DE300CF0916 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +42,10 @@
 		D5B01AE423A96DE800CF0916 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D5B01AE723A96DE800CF0916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5B01AE923A96DE800CF0916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5B01AEF23A9711400CF0916 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D5B1BB5E23DB5B24006858BA /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		D5B1BB6023DB80C7006858BA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		D5C141D123AA9AA900E6DCFD /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		D5C141D723ABE1D000E6DCFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +91,20 @@
 			isa = PBXGroup;
 			children = (
 				D5B01ADB23A96DE300CF0916 /* AppDelegate.swift */,
+				D593758523CCF1F7003F4030 /* Authentication.swift */,
+				D5B1BB5E23DB5B24006858BA /* Database.swift */,
+				D5C141D123AA9AA900E6DCFD /* Models.swift */,
 				D5B01ADD23A96DE300CF0916 /* SceneDelegate.swift */,
+				D593758723CCF667003F4030 /* SignInView.swift */,
 				D5B01ADF23A96DE300CF0916 /* ContentView.swift */,
+				D593758B23CE54E4003F4030 /* ReportView.swift */,
+				D593758D23CF9F14003F4030 /* ArchiveView.swift */,
+				D5B1BB6023DB80C7006858BA /* SearchBar.swift */,
+				D593758923CE5216003F4030 /* MainView.swift */,
 				D5B01AE123A96DE800CF0916 /* Assets.xcassets */,
 				D5B01AE623A96DE800CF0916 /* LaunchScreen.storyboard */,
 				D5B01AE923A96DE800CF0916 /* Info.plist */,
-				D5B01AEF23A9711400CF0916 /* GoogleService-Info.plist */,
+				D5C141D723ABE1D000E6DCFD /* GoogleService-Info.plist */,
 				D5B01AE323A96DE800CF0916 /* Preview Content */,
 			);
 			path = "House System Hub";
@@ -164,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5B01AE823A96DE800CF0916 /* LaunchScreen.storyboard in Resources */,
-				D5B01AF023A9711400CF0916 /* GoogleService-Info.plist in Resources */,
+				D5C141D823ABE1D000E6DCFD /* GoogleService-Info.plist in Resources */,
 				D5B01AE523A96DE800CF0916 /* Preview Assets.xcassets in Resources */,
 				D5B01AE223A96DE800CF0916 /* Assets.xcassets in Resources */,
 			);
@@ -236,9 +260,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D593758823CCF667003F4030 /* SignInView.swift in Sources */,
+				D593758A23CE5216003F4030 /* MainView.swift in Sources */,
+				D593758C23CE54E4003F4030 /* ReportView.swift in Sources */,
 				D5B01ADC23A96DE300CF0916 /* AppDelegate.swift in Sources */,
 				D5B01ADE23A96DE300CF0916 /* SceneDelegate.swift in Sources */,
 				D5B01AE023A96DE300CF0916 /* ContentView.swift in Sources */,
+				D593758623CCF1F7003F4030 /* Authentication.swift in Sources */,
+				D593758E23CF9F14003F4030 /* ArchiveView.swift in Sources */,
+				D5B1BB5F23DB5B25006858BA /* Database.swift in Sources */,
+				D5B1BB6123DB80C7006858BA /* SearchBar.swift in Sources */,
+				D5C141D223AA9AA900E6DCFD /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +416,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pastapeddler.House-System-Hub";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.canisiushigh.house-point-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -405,7 +437,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pastapeddler.House-System-Hub";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.canisiushigh.house-point-tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

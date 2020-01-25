@@ -10,4 +10,5 @@ target 'House System Hub' do
 	pod 'Firebase'
 	pod 'Firebase/Auth'
 	pod 'GoogleSignIn'
+  pod 'Firebase/Firestore'
 end

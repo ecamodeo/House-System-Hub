@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>FirebaseScreenReportingEnabled</key>
+	<false/>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>CLIENT_ID</key>
+	<string>321534051717-ebkpn3djubllr5ck94n0f2mibovhkkf6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.321534051717-ebkpn3djubllr5ck94n0f2mibovhkkf6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBzVO1aismMMBQyHbvfIi6yDxJctuWUzX4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>321534051717</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.canisiushigh.house-point-tracker</string>
+	<key>PROJECT_ID</key>
+	<string>house-point-tracker</string>
+	<key>STORAGE_BUCKET</key>
+	<string>house-point-tracker.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:321534051717:ios:fefeb67af9b632373470ec</string>
+	<key>DATABASE_URL</key>
+	<string>https://house-point-tracker.firebaseio.com</string>
+</dict>
+</plist>
